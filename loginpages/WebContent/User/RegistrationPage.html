@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Admin</title>
+<link rel="shortcut icon" href="homeimg\3.png"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/fontawesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+
+body{
+
+background-image: url('projectImgs/mmmm.jpg');
+color:white;
+font-size:20px;
+
+}
+
+.container{
+text-align:center;
+}
+
+.row{
+place-item: center;
+}
+
+#image{
+border-radius:130px;
+}
+
+.justify-content-center{
+margin:25px;
+}
+
+#btnhome{
+position:absolute;
+top:10px;
+right:10px; 
+}
+
+</style>
+
+
+</head>
+<body>
+<div class="container ">
+<img src="projectImgs\3.png" alt="img not avalable" id="image">
+<h2>New User</h2>
+
+<form action="../Login" method="post">
+<div class="row d-flex justify-content-center">
+<div class="col-md-1">
+ User Name :-
+ 
+</div>
+<div class="col-md-4">
+<input type="text" class="form-control" placeholder="eg:-Jivesh" name="txtid">
+</div>
+</div>
+<div class="row d-flex justify-content-center">
+<div class="col-md-1">
+ Password :-
+</div>
+
+<div class="col-md-4">
+<input type="password" class="form-control" placeholder="*********" name="txtpass">
+</div>
+</div>
+
+<div class="row d-flex justify-content-center">
+<div class="col-md-1">
+ Email :-
+</div>
+
+<div class="col-md-4">
+<input type="Email" class="form-control" placeholder="jivesh@gmail.com" name="txtpass">
+</div>
+</div>
+
+
+<div class="row d-flex justify-content-center">
+<div class="col-md-1">
+<input type="submit" value="Login" class="form-control"  class="btn btn-success" >
+</div>
+
+</div>
+</form>
+</div>
+
+<a href="UserLoginPage.html" class="btn btn-success" id="btnhome">Go To LoginPage</a>
+
+</body>
+</html>

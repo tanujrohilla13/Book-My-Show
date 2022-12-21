@@ -1,0 +1,246 @@
+@charset "ISO-8859-1";
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000;
+    color: white;
+}
+
+svg {
+    fill: #fff;
+    width: 140px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 10vh;
+    background-color: #000;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
+    font-size: .95rem;
+}
+
+.line {
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    background-color: #fff;
+}
+
+a:hover,
+a:hover i {
+    color: #1ED760;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    background-color: #313234;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 9rem;
+    transform: translateX(-10%);
+}
+
+.content h1 span {
+    display: block;
+    transform: translateX(30%);
+}
+
+.content button {
+    background-color: #e92b2b;
+    padding: .7rem 2rem;
+    border-radius: 100vw;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    cursor: pointer;
+    /* now we'll add that cool hover and active effect */
+    transition: 100ms ease-in-out box-shadow;
+}
+
+.content button:hover {
+    transform: scale(1.05);
+}
+
+.content button:active {
+    box-shadow: 0 0 0 .2rem #2941AB, 0 0 0 .4rem #fff;
+    /* add the +2 the value you added to the first shadow */
+    /* first shadow .2 + second shadow +2 = .4rem */
+}
+
+/* now we'll add the circles */
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #e92b2b;
+}
+
+.circle1 {
+    width: 80vh;
+    height: 90vh;
+    bottom: 3%;
+    right: 0;
+    transform: translateX(80%);
+}
+
+.circle2 {
+    width: 350px;
+    height: 350px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-60%, 20%);
+    /* fix the mistake */
+}
+
+.circle3 {
+    width: 650px;
+    height: 650px;
+    bottom: 0;
+    left: 0;
+    transform: translate(-30%, 80%);
+    overflow: hidden;
+}
+
+/* now I'll show you how to create that cool effect */
+
+.circle3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 350px;
+    background-color: #e92b2b;
+    border-radius: 50%;
+    transform: translate(-14px, -149px);
+}
+
+/* that's how we created that cool effect with the help of pseudo-elements. */
+
+/* now we'll create the footer */
+
+footer {
+    position: relative;
+    background-color: #000;
+    min-height: 60vh;
+    width: 100%;
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    place-items: center;
+    align-items: flex-start;
+}
+
+footer * {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer h5 {
+    opacity: .4;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05rem;
+}
+
+.web_links_container {
+    display: flex;
+}
+
+.web_links {
+    margin-left: 3rem;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 3rem;
+}
+
+.web_links>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.web_links a,
+.web_links h5 {
+    margin: .5rem 0;
+    font-size: .9rem;
+}
+
+.social_links {
+    display: flex;
+    margin-right: 10rem;
+}
+
+.social_links a {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #222326;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.other_links,
+.copyright {
+    opacity: .5;
+    font-size: .7rem;
+    margin-top: 6rem;
+}
+
+.other_links a {
+    margin: 0 .5rem;
+}
+
+.copyright {
+    margin-top: 5rem;
+    text-align: right;
+}
+
+.copyright a {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.web-logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.web-logo span {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative;
+    left: 2%;
+    vertical-align: middle;
+}
